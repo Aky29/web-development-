@@ -5,25 +5,26 @@
 </head>
 <body>
     <form>
-        <div>
-            <div><label>Name : </label><input type="text" id="fo" placeholder="Chomu"></div>
-            <div><label>Email : </label><input type="email" id='fo' placeholder="abc@adhd.dlp"></div>
-            <div><label>Password : </label><input type="password" id="fo" ></div>
-            <div><label>Age : </label><input type='range' id='age' min='0' max='100' value = 18><span id="agevalue">18</span> Years</div>
+        <div class="layer1">
+            <div class="layer2"><label>Name : </label><input type="text" id="fo" placeholder="Chomu"></div>
+            <div class="layer2"><label>Email : </label><input type="email" id='em' placeholder="abc@adhd.dlp"></div>
+            <div class="layer2"><label>Password : </label><input type="password" id="pwd" ></div>
+            <div class="layer2"><label>Age : </label><input type='range' id='age' min='0' max='100' value = 18><span id="agevalue">18</span> Years</div>
         </div>
-        <div>
-            <div><label>Checkbutton 1</label><input type="checkbox" id="chk-btn" value="I"></div>
-            <div><label>Checkbutton 2</label><input type="checkbox" id="chk-btn" value="J"></div>
-            <div><label>Checkbutton 3</label><input type="checkbox" id="chk-btn" value="K"></div>
-            <div><label>Checkbutton 4</label><input type="checkbox" id="chk-btn" value="L"></div>
+        <div class="layer1">
+            <div class="layer2"><label>Checkbutton 1</label><input type="checkbox" id="chk-btn" value="1"></div>
+            <div class="layer2"><label>Checkbutton 2</label><input type="checkbox" id="chk-btn" value="2"></div>
+            <div class="layer2"><label>Checkbutton 3</label><input type="checkbox" id="chk-btn" value="3"></div>
+            <div class="layer2"><label>Checkbutton 4</label><input type="checkbox" id="chk-btn" value="4"></div>
+            <div><h1>result</h1></div>
         </div>
-        <div id="radio-main">
-            <div><label>Button 1</label><input type="radio" id="btn" value="A"></div>
-            <div><label>Button 2</label><input type="radio" id="btn" value="B"></div>
-            <div><label>Button 3</label><input type="radio" id="btn" value="C"></div>
-            <div><label>Button 4</label><input type="radio" id="btn" value="D"></div>
+        <div class="layer1">
+            <div class="layer2"><label>Blue</label><input type="radio" class="rbtn" value="red" name="option"></div>
+            <div class="layer2"><label>red</label><input type="radio" class="rbtn" value="blue" name="option"></div>
+            <div class="layer2"><label>green</label><input type="radio" class="rbtn" value="orange" name="option"></div>
+            <div class="layer2"><label>orange</label><input type="radio" class="rbtn" value="green" name="option"></div>
         </div>
-        <button id="submit">SUBMIT</button>
+        <div class="layer1"><button id="submit">SUBMIT</button></div>
         <script src="script.js"></script>
     </form>
 </body>

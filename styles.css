@@ -1,8 +1,34 @@
-.main_button{
-    border-radius: 100px;
+body{
+    padding: 10px;
+    margin: 10px;
+}
+html{
+    scroll-snap-type: y mandatory;
+    background-color: aliceblue;
 }
 
-#slider{
-    color: black;
-    background-color: aqua;
+.layer1{
+    display: flexbox;
+    background-color: blue;
+    border-radius: 5px;
+    padding: 100px;
+    height:500px;
+    margin: 30px;
+    width: auto;
+
+    align-content: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: center;
+}
+.layer2{
+    background-color: antiquewhite;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+input{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 3px;
 }
