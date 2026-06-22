@@ -3,5 +3,5 @@
 
     // Update display when slider value changes
     slider.addEventListener('input', function () {
-        output.textContent = this.value;
+        output.textContent = slider.value;
     });

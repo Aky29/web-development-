@@ -13,13 +13,10 @@ body {
     padding: 20px;
 }
 
-/* ==========================================================================
-   2. ANIMATIONS
-   ========================================================================== */
-@keyframes fadeInUp {
+@keyframes upparja {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(45px);
     }
     to {
         opacity: 1;
@@ -27,9 +24,6 @@ body {
     }
 }
 
-/* ==========================================================================
-   3. THE MAIN CONTAINER CARD
-   ========================================================================== */
 .info {
     background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.08);
@@ -42,24 +36,16 @@ body {
     flex-direction: column;
     gap: 10px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 20px 48px rgba(0, 0, 0, 0.05);
-    animation: fadeInUp 0.6s forwards;
+    animation: upparja 0.6s forwards;
 }
 
 .form-header {
     text-align: center;
     margin-bottom: 10px;
-}
-
-.form-header h2 {
     color: #1a1a1a;
-    font-size: 1.75rem;
     font-weight: 700;
     letter-spacing: -0.5px;
     margin-bottom: 6px;
-}
-
-.form-header p {
-    color: #666666;
     font-size: 0.95rem;
 }
 

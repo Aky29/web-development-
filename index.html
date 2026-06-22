@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technical Team Assignment</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <form class="info">
         <div class="form-header">
             <h2>Registration Form</h2>
@@ -16,7 +13,7 @@
 
         <div class="form-group">
             <label for="name">Full Name</label>
-            <input type="text" id="name" placeholder="ME NAME" required>
+            <input type="text" id="name" placeholder="Reshma Rani" required>
         </div>
 
         <div class="form-group">
@@ -26,7 +23,7 @@
 
         <div class="form-group">
             <label for="age">Age: <span id="agevalue">18</span> Years</label>
-            <input type="range" id="age" value="18" max="100" min="12" oninput="document.getElementById('agevalue').innerText = this.value">
+            <input type="range" id="age" value="18" max="100" min="12">
         </div>
 
         <div class="form-group">
@@ -42,12 +39,12 @@
 
         <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="example@yehai.com" required>
+            <input type="email" id="email" placeholder="vijaykumar@gmail.com" required>
         </div>
 
         <div class="form-group">
             <label for="tel">Telephone</label>
-            <input type="tel" id="tel" placeholder="+000000000">
+            <input type="tel" id="tel" placeholder="+1234567890">
         </div>
 
         <div class="form-group">
@@ -66,16 +63,16 @@
 
         <div class="form-group full-width">
             <label for="queries">Queries</label>
-            <textarea id="queries" rows="3" placeholder="Do you have any questions for the technical team?"></textarea>
+            <textarea id="queries" rows="3" placeholder="you have doubts? write it here"></textarea>
         </div>
 
         <div class="form-group full-width">
             <label for="feedback">Feedback</label>
-            <textarea id="feedback" rows="3" placeholder="Leave your feedback here..."></textarea>
+            <textarea id="feedback" rows="3" placeholder="what was your experience using this"></textarea>
         </div>
 
         <button type="submit" class="full-width">Submit Application</button>
     </form>
-
+    <script src="script.js"></script>
 </body>
 </html>
