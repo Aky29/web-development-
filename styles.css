@@ -1,34 +1,225 @@
-body{
-    padding: 10px;
-    margin: 10px;
-}
-html{
-    scroll-snap-type: y mandatory;
-    background-color: aliceblue;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.layer1{
-    display: flexbox;
-    background-color: blue;
-    border-radius: 5px;
-    padding: 100px;
-    height:500px;
-    margin: 30px;
-    width: auto;
-
-    align-content: center;
+body {
+    display: flex;
     justify-content: center;
-    scroll-snap-align: start;
-    scroll-snap-stop: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #212121 0%, #0b2754 100%);
+    padding: 20px;
 }
-.layer2{
-    background-color: antiquewhite;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
+
+/* ==========================================================================
+   2. ANIMATIONS
+   ========================================================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-input{
-    border-radius: 10px;
-    padding: 10px;
-    margin: 3px;
+
+/* ==========================================================================
+   3. THE MAIN CONTAINER CARD
+   ========================================================================== */
+.info {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 32px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 20px 48px rgba(0, 0, 0, 0.05);
+    animation: fadeInUp 0.6s forwards;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-header h2 {
+    color: #1a1a1a;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+}
+
+.form-header p {
+    color: #666666;
+    font-size: 0.95rem;
+}
+
+/* Structural groups to keep labels paired with their corresponding input fields */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    min-width: 0;
+}
+
+/* ==========================================================================
+   4. FORM COMPONENT INPUT FIELDS
+   ========================================================================== */
+.info label {
+    color: #4a4a4a;
+    font-weight: 600;
+    font-size: 0.9rem;
+    align-self: flex-start;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+/* Transition target label color tweak on interactive hover states */
+.info label:hover {
+    color: #000000;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+    background-color: #fcfcfc;
+    color: #1a1a1a;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+/* Micro-interactions for form entry elements */
+input:hover, select:hover, textarea:hover {
+    border-color: #b5b5b5;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #4a90e2;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.15); /* Elegant crisp outline highlight glow */
+}
+
+/* Range input customization */
+input[type="range"] {
+    width: 100%;
+    height: 6px;
+    background: #e9e9e9;
+    border-radius: 4px;
+    outline: none;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+/* Fieldset and radio formatting options */
+fieldset {
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 5px;
+}
+
+legend {
+    color: #4a4a4a;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0 8px;
+}
+
+.radio-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 4px;
+}
+
+.radio-wrapper label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.radio-wrapper input[type="radio"] {
+    accent-color: #4a90e2; /* Themed selection indicator dot color */
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   5. ACTION TRIGGER SUBMIT BUTTON
+   ========================================================================== */
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+button[type="submit"]:hover {
+    background-color: #333333;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+button[type="submit"]:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   6. RESPONSIVE DESKTOP ADAPTATION (2-COLUMN GRID SYSTEM)
+   ========================================================================== */
+@media screen and (min-width: 900px) {
+    .info {
+        max-width: 850px; /* Wider footprint boundary allowed on desktops */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Splits page into side-by-side elements */
+        gap: 24px;
+        padding: 44px;
+    }
+
+    /* Assign items spanning rules to maintain standard row boundaries */
+    .form-header,
+    fieldset,
+    .full-width {
+        grid-column: span 2;
+    }
+    
+    button[type="submit"] {
+        margin-top: 0;
+    }
 }

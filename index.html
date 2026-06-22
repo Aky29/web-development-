@@ -1,31 +1,81 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Technical Team first assigment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Team Assignment</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form>
-        <div class="layer1">
-            <div class="layer2"><label>Name : </label><input type="text" id="fo" placeholder="Chomu"></div>
-            <div class="layer2"><label>Email : </label><input type="email" id='em' placeholder="abc@adhd.dlp"></div>
-            <div class="layer2"><label>Password : </label><input type="password" id="pwd" ></div>
-            <div class="layer2"><label>Age : </label><input type='range' id='age' min='0' max='100' value = 18><span id="agevalue">18</span> Years</div>
+
+    <form class="info">
+        <div class="form-header">
+            <h2>Registration Form</h2>
+            <p>Please fill out the assignment form details below.</p>
         </div>
-        <div class="layer1">
-            <div class="layer2"><label>Checkbutton 1</label><input type="checkbox" id="chk-btn" value="1"></div>
-            <div class="layer2"><label>Checkbutton 2</label><input type="checkbox" id="chk-btn" value="2"></div>
-            <div class="layer2"><label>Checkbutton 3</label><input type="checkbox" id="chk-btn" value="3"></div>
-            <div class="layer2"><label>Checkbutton 4</label><input type="checkbox" id="chk-btn" value="4"></div>
-            <div><h1>result</h1></div>
+
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="ME NAME" required>
         </div>
-        <div class="layer1">
-            <div class="layer2"><label>Blue</label><input type="radio" class="rbtn" value="red" name="option"></div>
-            <div class="layer2"><label>red</label><input type="radio" class="rbtn" value="blue" name="option"></div>
-            <div class="layer2"><label>green</label><input type="radio" class="rbtn" value="orange" name="option"></div>
-            <div class="layer2"><label>orange</label><input type="radio" class="rbtn" value="green" name="option"></div>
+
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" required>
         </div>
-        <div class="layer1"><button id="submit">SUBMIT</button></div>
-        <script src="script.js"></script>
+
+        <div class="form-group">
+            <label for="age">Age: <span id="agevalue">18</span> Years</label>
+            <input type="range" id="age" value="18" max="100" min="12" oninput="document.getElementById('agevalue').innerText = this.value">
+        </div>
+
+        <div class="form-group">
+            <label for="branch">Branch</label>
+            <select id="branch" name="branch" required>
+                <option value="">-- Select Branch --</option>
+                <option value="CSE">CSE</option>
+                <option value="CSIT">CSIT</option>
+                <option value="ECE">ECE</option>
+                <option value="EEE">EEE</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="example@yehai.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="tel">Telephone</label>
+            <input type="tel" id="tel" placeholder="+000000000">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter Password" required>
+        </div>
+
+        <fieldset class="full-width">
+            <legend>Gender</legend>
+            <div class="radio-wrapper">
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="not mention"> Prefer not to say</label>
+            </div>
+        </fieldset>
+
+        <div class="form-group full-width">
+            <label for="queries">Queries</label>
+            <textarea id="queries" rows="3" placeholder="Do you have any questions for the technical team?"></textarea>
+        </div>
+
+        <div class="form-group full-width">
+            <label for="feedback">Feedback</label>
+            <textarea id="feedback" rows="3" placeholder="Leave your feedback here..."></textarea>
+        </div>
+
+        <button type="submit" class="full-width">Submit Application</button>
     </form>
+
 </body>
 </html>
