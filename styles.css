@@ -49,7 +49,6 @@ body {
     font-size: 0.95rem;
 }
 
-/* Structural groups to keep labels paired with their corresponding input fields */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -57,24 +56,12 @@ body {
     width: 100%;
     min-width: 0;
 }
-
-/* ==========================================================================
-   4. FORM COMPONENT INPUT FIELDS
-   ========================================================================== */
-.info label {
-    color: #4a4a4a;
-    font-weight: 600;
-    font-size: 0.9rem;
+label {
+    font-size: 1rem;
     align-self: flex-start;
     cursor: pointer;
-    transition: color 0.2s ease;
+    transition: upparja 0.5s ease;
 }
-
-/* Transition target label color tweak on interactive hover states */
-.info label:hover {
-    color: #000000;
-}
-
 input[type="text"],
 input[type="tel"],
 input[type="email"],
@@ -93,19 +80,15 @@ textarea {
     outline: none;
     transition: all 0.2s ease;
 }
-
-/* Micro-interactions for form entry elements */
 input:hover, select:hover, textarea:hover {
     border-color: #b5b5b5;
 }
-
 input:focus, select:focus, textarea:focus {
     border-color: #4a90e2;
     background-color: #ffffff;
-    box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.15); /* Elegant crisp outline highlight glow */
+    box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.15); 
 }
 
-/* Range input customization */
 input[type="range"] {
     width: 100%;
     height: 6px;
@@ -115,8 +98,6 @@ input[type="range"] {
     margin: 8px 0;
     cursor: pointer;
 }
-
-/* Fieldset and radio formatting options */
 fieldset {
     border: 1px solid #e1e1e1;
     border-radius: 8px;
@@ -137,7 +118,6 @@ legend {
     gap: 16px;
     margin-top: 4px;
 }
-
 .radio-wrapper label {
     display: inline-flex;
     align-items: center;
@@ -145,22 +125,11 @@ legend {
     font-weight: 500;
     margin: 0;
 }
-
-.radio-wrapper input[type="radio"] {
-    accent-color: #4a90e2; /* Themed selection indicator dot color */
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-}
-
 textarea {
     resize: vertical;
 }
 
-/* ==========================================================================
-   5. ACTION TRIGGER SUBMIT BUTTON
-   ========================================================================== */
-button[type="submit"] {
+button{
     width: 100%;
     padding: 14px;
     margin-top: 10px;
@@ -171,34 +140,25 @@ button[type="submit"] {
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px black;
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-button[type="submit"]:hover {
-    background-color: #333333;
+button:hover {
+    background-color: grey;
     transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 20px black;
 }
 
-button[type="submit"]:active {
-    transform: translateY(1px);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* ==========================================================================
-   6. RESPONSIVE DESKTOP ADAPTATION (2-COLUMN GRID SYSTEM)
-   ========================================================================== */
+/* yeh wale part ke liye ai use kiya hai*/
 @media screen and (min-width: 900px) {
     .info {
-        max-width: 850px; /* Wider footprint boundary allowed on desktops */
+        max-width: 850px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Splits page into side-by-side elements */
+        grid-template-columns: repeat(2, 1fr);
         gap: 24px;
         padding: 44px;
     }
-
-    /* Assign items spanning rules to maintain standard row boundaries */
     .form-header,
     fieldset,
     .full-width {
